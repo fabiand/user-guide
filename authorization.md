@@ -1,13 +1,3 @@
----
-Called:         Donald  
-In Conference:  Huey
-                Duey
-                Louis  
-Project:        Fake Disney App
-Author:         Hilton Lipschitz  
-Affiliation:    Noverse LLC  
----
-
 # Authorization
 
 KubeVirt authorization is performed using Kubernete's Resource Based
@@ -119,3 +109,6 @@ rules:
       - get
       - patch
 ```
+
+---
+Verified with version: v0.5.0
