@@ -6,8 +6,6 @@ In Conference:  Huey
 Project:        Fake Disney App
 Author:         Hilton Lipschitz  
 Affiliation:    Noverse LLC  
-Web:            http://www.noverse.com  
-Date:           June 11, 2012 16:48
 ---
 
 # Authorization
