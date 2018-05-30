@@ -1,3 +1,5 @@
+ReviewedVersion:     v0.5.0  
+
 # Authorization
 
 KubeVirt authorization is performed using Kubernete's Resource Based
