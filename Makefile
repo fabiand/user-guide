@@ -1,7 +1,11 @@
-publish: build
+publish: clean build
 	asciibinder package
-	rm -rf docs
 	mv _package/community docs
+
+clean:
+	asciibinder clean
+	rm -rf docs
+
 build:
 	asciibinder build -l debug
 
