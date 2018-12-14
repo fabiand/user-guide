@@ -15,15 +15,14 @@ addons:
 
 before_script:
 - gem install ascii_binder
+- git config credential.helper "/bin/bash $PWD/credential-helper.sh"
 
 script:
   - make build
   - make test
 
 deploy:
-  provider: pages
-  skip-cleanup: true
-  github-token: $GITHUB_TOKEN  # Set in the settings page of your repository, as a secure variable
-  keep-history: true
+  provider: script
+  script: make publish-github
   on:
     branch: master

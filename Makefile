@@ -2,6 +2,18 @@ publish: clean build
 	asciibinder package
 	mv _package/community docs
 
+publish-github: publish
+	[[ -n "$${GITHUB_TOKEN}" ]]
+	git remote github git@github.com:kubevirt/user-guide.git
+	git config --global user.email "travis@travis-ci.org"
+	git config --global user.name "Travis CI"
+	#commit_website_files()
+	git add docs/
+	git commit --message "Travis build: $$TRAVIS_BUILD_NUMBER"
+	#upload_files()
+	git remote add origin-pages https://$${GITHUB_TOKEN}@github.com/kubevirt/user-guide.git
+	git push --set-upstream origin-pages master
+
 clean:
 	asciibinder clean
 	rm -rf docs
