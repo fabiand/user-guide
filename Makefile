@@ -1,3 +1,6 @@
+publish: build
+	asciibinder package
+	mv _package/community docs
 build:
 	asciibinder build -l debug
 
