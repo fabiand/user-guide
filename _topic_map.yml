@@ -27,8 +27,6 @@ Distros: kubevirt-*
 Topics:
 - Name: Welcome
   File: index
-- Name: More
-  File: additional-resources
 ---
 Name: Release Notes
 Dir: release-notes
