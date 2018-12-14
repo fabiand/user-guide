@@ -10,8 +10,8 @@ publish-github: publish
 	git add docs/
 	git commit --message "Travis build: $$TRAVIS_BUILD_NUMBER"
 	#upload_files()
-	git remote add github https://$${GITHUB_TOKEN}@github.com/fabiand/user-guide.git
-	git push --set-upstream github master
+	git remote add github https://$${GITHUB_TOKEN}@github.com/fabiand/user-guide.git || :
+	git push github master:gh-pages -f
 
 clean:
 	asciibinder clean
