@@ -10,7 +10,7 @@ publish-github: publish
 	git add docs/
 	git commit --message "Travis build: $$TRAVIS_BUILD_NUMBER"
 	#upload_files()
-	git remote add github https://$${GITHUB_TOKEN}@github.com/kubevirt/user-guide.git
+	git remote add github https://$${GITHUB_TOKEN}@github.com/fabiand/user-guide.git
 	git push --set-upstream github master
 
 clean:
